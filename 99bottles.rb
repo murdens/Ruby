@@ -2,7 +2,9 @@ def englishNumber number
   if number == 0
     return 'zero'
   end
+
 while number > 0
+  
   numString = '' 
 
   onesPlace = ['one',     'two',       'three',    'four',     'five',
@@ -15,6 +17,7 @@ while number > 0
   left  = number
   write = left/100          
   left  = left - write*100  
+
 
   if write > 0
     hundreds  = englishNumber write
@@ -48,10 +51,11 @@ while number > 0
     numString = numString + onesPlace[write-1]
   end
 
-  if number == 99
+  if number == 9999
     puts numString+" bottles of beer on the wall"
     puts numString+" bottles of beer"
     puts 'take one down and pass it around'
+  
   elsif number == 1
     puts numString+" bottle of beer"
     puts
@@ -67,7 +71,8 @@ while number > 0
     puts 'take one down and pass it around'
   end
     number = number-1
+   
   end
 end
 
-englishNumber(99)
+englishNumber(9999)
